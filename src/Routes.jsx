@@ -6,6 +6,7 @@ const CountWithClass = lazy(() => import('./view/count/CountWithClass'));
 const EmployeeList = lazy(() => import('./view/employee/List'));
 const AddEmployeeDetail = lazy(() => import('./view/employee/Add'));
 const EditEmployeeDetail = lazy(() => import('./view/employee/Edit'));
+const Clock = lazy(() => import('./view/Clock/Clock'));
 
 const Routes = () => (
   <Router>
@@ -50,6 +51,15 @@ const Routes = () => (
         element={(
           <Suspense fallback={<p>Loading</p>}>
             <AddEmployeeDetail />
+          </Suspense>
+)}
+      />
+      <Route
+        exact
+        path="/clock"
+        element={(
+          <Suspense fallback={<p>Loading</p>}>
+            <Clock />
           </Suspense>
 )}
       />
