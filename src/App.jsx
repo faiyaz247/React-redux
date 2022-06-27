@@ -1,20 +1,15 @@
-import React, { memo } from 'react';
-import { Provider } from 'react-redux';
-import { Container, CssBaseline } from '@material-ui/core';
-import store from './redux/store';
+import React from "react";
+import { Container, CssBaseline } from "@material-ui/core";
 
-import Routes from './Routes';
+import Routes from "./Routes";
 
-const App = memo(() => (
-  <>
+const App = () => (
+  <React.Fragment>
     <CssBaseline />
     <Container>
-      <h4>React Redux</h4>
-      <Provider store={store}>
-        <Routes />
-      </Provider>
+      <Routes />
     </Container>
-  </>
-));
+  </React.Fragment>
+);
 
 export default App;
